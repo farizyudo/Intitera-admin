@@ -1,0 +1,6 @@
+{
+    "valid_username": "superadmin",
+    "valid_pass": "password",
+    "invalid_username": "username",
+    "invalid_pass": "Password"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "intitera-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farizyudo/Intitera-admin.git"
+  },
+  "author": "Fariz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farizyudo/Intitera-admin/issues"
+  },
+  "homepage": "https://github.com/farizyudo/Intitera-admin#readme",
+  "devDependencies": {
+    "cypress": "^14.3.2"
+  }
+}
