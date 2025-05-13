@@ -1,11 +1,10 @@
 class loginElement {
-    email = ':nth-child(2) > .chakra-input'
-
-    pass = ':nth-child(3) > .chakra-input'
-    logInButton = '.chakra-button'
+    username = '#user'
+    pass = '#password'
+    logInButton = '.inline-flex'
 
     inputUsername(userEmail) {
-        cy.get(this.email)
+        cy.get(this.username)
             .clear()
             .type(userEmail)
     }
