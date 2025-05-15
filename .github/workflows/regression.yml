@@ -1,0 +1,15 @@
+name: Regression Intitera tests
+on: push
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress regression run
+        uses: cypress-io/github-action@v6 
+        with:
+            spec: cypress/e2e/01-login.cy.js
+            browser: chrome

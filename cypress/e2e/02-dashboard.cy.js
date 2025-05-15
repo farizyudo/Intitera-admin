@@ -7,7 +7,7 @@ const userData = require('../fixtures/user.json');
 describe('Login Scenario', () => {
 
     beforeEach(() => {
-        cy.visit('https://terafarma-fe.geekgarden.my.id/  ')
+        cy.visit('/dashboard')
         loginElement.inputUsername(userData.valid_username)
         loginElement.inputPassword(userData.valid_pass)
         loginElement.BTNlogin()
@@ -22,6 +22,7 @@ describe('Login Scenario', () => {
     });
 
     it('Date Picker', () => {
+        cy.get('.absolute').click()
         const today = getTodayDateFormatted()
         const tomorrow = getTomorrowDateFormatted()
         cy.get('.bg-\\[\\#DDE1E6\\] > :nth-child(1) > .flex').type(today)

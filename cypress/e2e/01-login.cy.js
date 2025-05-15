@@ -5,12 +5,12 @@ const userData = require('../fixtures/user.json')
 describe('Login Scenario', () => {
 
   beforeEach(() => {
-    cy.visit('https://terafarma-fe.geekgarden.my.id/  ')
+    cy.visit('/')
   })
 
   // Login Success | Positive Case
   // Login Valid
-  it.only('Login Success', () => {                              // Login Success
+  it('Login Success', () => {                              // Login Success
     loginElement.inputUsername(userData.valid_username)
     loginElement.inputPassword(userData.valid_pass)
     loginElement.BTNlogin()
