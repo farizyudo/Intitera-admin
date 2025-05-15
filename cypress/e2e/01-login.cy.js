@@ -14,6 +14,7 @@ describe('Login Scenario', () => {
     loginElement.inputUsername(userData.valid_username)
     loginElement.inputPassword(userData.valid_pass)
     loginElement.BTNlogin()
+    cy.wait(1000)
     cy.contains('Dashboard').should('be.visible')
   })
 
@@ -23,6 +24,7 @@ describe('Login Scenario', () => {
     loginElement.inputUsername('sUpErAdMiN')
     loginElement.inputPassword('password')
     loginElement.BTNlogin()
+    cy.wait(1000)
     cy.contains('Dashboard').should('be.visible')
   })
 
@@ -32,6 +34,7 @@ describe('Login Scenario', () => {
     loginElement.inputUsername(userData.invalid_username)
     loginElement.inputPassword('PasSworD')
     loginElement.BTNlogin()
+    cy.wait(1000)
     cy.contains('error').should('be.visible')
   })
 
@@ -40,7 +43,7 @@ describe('Login Scenario', () => {
     loginElement.inputUsername('super_admin@gmail.com')
     loginElement.inputPassword('PassworD')
     loginElement.BTNlogin()
-    // cy.wait(1000)
+    cy.wait(1000)
     cy.contains('error').should('be.visible')
   })
 
@@ -49,6 +52,7 @@ describe('Login Scenario', () => {
     loginElement.inputUsername('super_admin@gmail.com')
     loginElement.inputPassword('password')
     loginElement.BTNlogin()
+    cy.wait(1000)
     cy.contains('error').should('be.visible')
   })
 
